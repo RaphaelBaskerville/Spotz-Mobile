@@ -33,7 +33,7 @@ angular.module('spotz.parking', ['spotzFilter', 'parkingService', 'timerService'
       current -= 1000;
       if (current < 1000) {
         $interval.cancel($scope.stopTimer);
-      };
+      }
 
       $scope.timeLeftOnTimer = timerFactory.formatMillisecs(current);
     }, 1000);
@@ -75,7 +75,7 @@ angular.module('spotz.parking', ['spotzFilter', 'parkingService', 'timerService'
     watch.then(null,
       function (error) {
         // An error occurred
-        console.log('an error occured')
+        console.log('an error occured');
       },
       function (result) {
         var X = result.x;
